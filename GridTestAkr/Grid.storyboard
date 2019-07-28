@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o0N-Do-XoL">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Grid First View Controller-->
+        <scene sceneID="qTP-kz-uPh">
+            <objects>
+                <viewController id="dqi-aL-oqL" customClass="GridFirstViewController" customModule="GridTestAkr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mwl-qf-wVT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="wUQ-jf-Bw7">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="dqi-aL-oqL" id="mFQ-Ty-oaO"/>
+                                </connections>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="La4-42-KWe">
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="b8Q-da-UgQ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="dqi-aL-oqL" id="HuU-Uf-Ioi"/>
+                                    <outlet property="delegate" destination="dqi-aL-oqL" id="Up3-Nx-Bdr"/>
+                                    <outlet property="prefetchDataSource" destination="dqi-aL-oqL" id="5Bq-pU-0Fk"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="La4-42-KWe" firstAttribute="bottom" secondItem="fWQ-fz-Gqh" secondAttribute="bottom" id="BUS-wn-uBk"/>
+                            <constraint firstItem="wUQ-jf-Bw7" firstAttribute="leading" secondItem="fWQ-fz-Gqh" secondAttribute="leading" id="Cmp-8t-jOP"/>
+                            <constraint firstItem="wUQ-jf-Bw7" firstAttribute="trailing" secondItem="fWQ-fz-Gqh" secondAttribute="trailing" id="IBW-Bx-lDL"/>
+                            <constraint firstItem="La4-42-KWe" firstAttribute="leading" secondItem="fWQ-fz-Gqh" secondAttribute="leading" id="VKd-ps-s3k"/>
+                            <constraint firstItem="La4-42-KWe" firstAttribute="trailing" secondItem="fWQ-fz-Gqh" secondAttribute="trailing" id="VWv-vm-7kK"/>
+                            <constraint firstItem="wUQ-jf-Bw7" firstAttribute="top" secondItem="fWQ-fz-Gqh" secondAttribute="top" id="csC-xb-pfh"/>
+                            <constraint firstItem="La4-42-KWe" firstAttribute="top" secondItem="wUQ-jf-Bw7" secondAttribute="bottom" id="eck-FN-DKO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fWQ-fz-Gqh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FZf-Fn-d97">
+                        <barButtonItem key="rightBarButtonItem" title="Delete all" id="uQR-ag-kdR">
+                            <connections>
+                                <action selector="deleteAll:" destination="dqi-aL-oqL" id="f0e-qc-I3J"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="curCollectionView" destination="La4-42-KWe" id="ToQ-JX-ICK"/>
+                        <outlet property="curSearchBar" destination="wUQ-jf-Bw7" id="xE6-MC-K7Q"/>
+                        <segue destination="mea-PF-xQG" kind="show" identifier="showDetails" id="dXf-Xc-w0j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AWZ-xo-k8p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1192.753623188406" y="-20.089285714285712"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="a5J-JL-ouj">
+            <objects>
+                <viewController id="mea-PF-xQG" customClass="DetailsViewController" customModule="GridTestAkr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kyt-6q-w8k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="So8-NO-Gug">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="So8-NO-Gug" firstAttribute="trailing" secondItem="c39-mH-kfn" secondAttribute="trailing" id="1tM-wa-Z1f"/>
+                            <constraint firstItem="So8-NO-Gug" firstAttribute="bottom" secondItem="c39-mH-kfn" secondAttribute="bottom" id="PYL-AO-4Xv"/>
+                            <constraint firstItem="So8-NO-Gug" firstAttribute="top" secondItem="c39-mH-kfn" secondAttribute="top" id="azB-tm-e2N"/>
+                            <constraint firstItem="So8-NO-Gug" firstAttribute="leading" secondItem="c39-mH-kfn" secondAttribute="leading" id="vbe-Ps-NMf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c39-mH-kfn"/>
+                    </view>
+                    <connections>
+                        <outlet property="curImageView" destination="So8-NO-Gug" id="Um7-or-buv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LKb-TD-9nD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2179.7101449275365" y="-9.375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ASh-Ns-BRU">
+            <objects>
+                <navigationController id="o0N-Do-XoL" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7f7-7w-wSV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dqi-aL-oqL" kind="relationship" relationship="rootViewController" id="nxe-NF-1EY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vzP-ZU-ExM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="273" y="-7"/>
+        </scene>
+    </scenes>
+</document>
