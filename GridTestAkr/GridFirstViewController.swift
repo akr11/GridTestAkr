@@ -33,7 +33,7 @@ class GridFirstViewController: UIViewController, UISearchBarDelegate, NSFetchedR
     static let perPage: Int = 30
     
      static let baseURL = "https://api.unsplash.com/"
-    static let api_key = "4c9fbfbbd92c17a2e95081cec370b4511659666240eb4db9416c40c641ee843b"
+    static let api_key = "YOUR_KEY_INPUT_PLEASE"
     
     static let parameters = [
         "api_key": api_key,
