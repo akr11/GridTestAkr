@@ -20,7 +20,6 @@
 		8308B22B22EC41D400EB97D1 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308B22A22EC41D400EB97D1 /* CoreDataStack.swift */; };
 		8308B23122EC925B00EB97D1 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308B22F22EC925B00EB97D1 /* CollectionViewCell.swift */; };
 		8308B23222EC925B00EB97D1 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8308B23022EC925B00EB97D1 /* CollectionViewCell.xib */; };
-		83199E9E22ED180400EC330A /* forNetworkImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83199E9C22ED17C500EC330A /* forNetworkImage.framework */; };
 		83199EA422ED1BCB00EC330A /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83199EA322ED1BCB00EC330A /* ApiManager.swift */; };
 		B75CE0C9AE4CD95355E89D77 /* Pods_GridTestAkr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1FD1CCE64461AAEB2D9413 /* Pods_GridTestAkr.framework */; };
 /* End PBXBuildFile section */
@@ -44,7 +43,6 @@
 		8308B22F22EC925B00EB97D1 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		8308B23022EC925B00EB97D1 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		83199E9622ED161300EC330A /* forNetworkImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = forNetworkImage.framework; sourceTree = "<group>"; };
-		83199E9C22ED17C500EC330A /* forNetworkImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = forNetworkImage.framework; sourceTree = "<group>"; };
 		83199EA322ED1BCB00EC330A /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		9D1FD1CCE64461AAEB2D9413 /* Pods_GridTestAkr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GridTestAkr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -54,7 +52,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83199E9E22ED180400EC330A /* forNetworkImage.framework in Frameworks */,
 				B75CE0C9AE4CD95355E89D77 /* Pods_GridTestAkr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,7 +97,6 @@
 				8308B22322EC306600EB97D1 /* Grid.storyboard */,
 				8308B21322EC287A00EB97D1 /* Assets.xcassets */,
 				8308B21522EC287A00EB97D1 /* LaunchScreen.storyboard */,
-				83199E9C22ED17C500EC330A /* forNetworkImage.framework */,
 				8308B21822EC287A00EB97D1 /* Info.plist */,
 				8308B21022EC287600EB97D1 /* GridTestAkr.xcdatamodeld */,
 				8308B22122EC2CFC00EB97D1 /* PhotoCollectionViewCell.swift */,
